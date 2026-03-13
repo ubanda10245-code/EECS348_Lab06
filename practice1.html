@@ -27,10 +27,10 @@
         }
         /* Round profile picture style */
         img {
-            max-width: 200px;
-            border-radius: 50%;
+            max-height: 140px;
+            max-width: 150px;
+            border-radius: 100%;
         }
-        
         /* Body card style */
         .content-section {
             background: #fff;
@@ -38,12 +38,19 @@
             margin-top: 20px;
             border-radius: 8px;
         }
+        .back-button {
+            background-color: #e3e3e3;
+            padding: 10px;
+            border-color: #fff;
+            border-radius: 50%;
+            color: black;
+        }
     </style>
 </head>
 <body>
     <div class="profile-header">
         <h1>Joseph Ubanda-Ruiz</h1>
-        <img src="pictures/profile.jpg" alt="Profile Picture">
+        <img src="pictures/profile.png" alt="Profile Picture">
         <p>Software Engineering Student</p>
     </div>
 
@@ -63,7 +70,6 @@
             <li>EECS 348: Software Engineering</li>
             <li>EECS 388: Embedded Systems</li>
             <li>EECS 468: Programming Paradigms</li>
-
         </ul>
 
         <h3>Current Projects</h3>
@@ -72,8 +78,14 @@
 
     <div class="content-section">
         <h2>Featured Video</h2>
-        <iframe width="560" height="315" src=""></iframe>
+        <iframe width="760" height="515" src="https://www.youtube.com/embed/Li4j82QbBvk"></iframe>    
     </div>
     
+    <div class="content-section">
+        <a href="index.html">
+        <button class="back-button" type="button">Return to index</button>
+        </a>
+    </div>
+
 </body>
 </html>

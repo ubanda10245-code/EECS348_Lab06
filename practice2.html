@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice 2 - CCS Font Control</title>
+</head>
+<body>
+    <h2>Practice 2 - CCS Font Control</h2>
+    <p id="text" style="border: 5px solid rgb(0, 0, 0);">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae, quos numquam. Adipisci, et doloribus obcaecati ad minima itaque sed autem!
+    </p>
+
+    <p>RGB range is 0-255</p>
+    Red: <input type="number" id="red" value="0" min="0" max="255"> <br> 
+    Green: <input type="number" id="green" value="0" min="0" max="255"> <br> 
+    Blue: <input type="number" id="blue" value="0" min="0" max="255"> <br> 
+    Border Width: <input type="number" id="width" value="5" min="0"> <br> 
+    <button onclick="update()">Apply</button><br><br>
+
+    <script>
+        // Run update function
+        function update() {
+            // Get the element values by their ids
+            let r = document.getElementById("red").value;
+            let g = document.getElementById("green").value;
+            let b = document.getElementById("blue").value;
+            let w = document.getElementById("width").value;
+            let text = document.getElementById("text");
+
+            // Update color and border color based on RGB values
+            text.style.color = "rgb(" + r + "," + g + "," + b + ")"; 
+            text.style.borderColor = "rgb(" + r + "," + g + "," + b + ")"; 
+            
+            // Update border width
+            text.style.borderWidth = w + "px"; 
+        }
+    </script>
+
+    <a href="index.html">Return to Index</a>
+
+</body>
+</html>

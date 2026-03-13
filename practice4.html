@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice 4 - PHP Multiplication Table</title>
+</head>
+<body>
+    <h2>Practice 4 - PHP Multiplication Table</h2>
+    <form method="post">
+        Enter a number: <input type="number" name="size" value="0" required>
+        <button type="submit">Generate</button>
+    </form><br>
+
+    <?php
+    // Check method is POST
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Store the size value given by the user
+        $size = $_POST["size"];
+
+        // Build the html table
+        echo "<table border='1' style='border-collapse: collapse; padding: 5px;'>";
+        
+        // Print the header row (column indexes)
+        echo "<tr><td></td>";
+        for ($i = 1; $i <= $size; $i++) {
+            echo "<td style='font-weight: bold; text-align: center;'>$i</td>";
+        }
+        echo "</tr>";
+
+        // Print each row
+        for ($row = 1; $row <= $size; $row++) {
+            echo "<tr>";
+            // Print the current row index in the first column
+            echo "<td style='font-weight: bold;'>$row</td>";
+            
+            // Print the multiplication values
+            for ($col = 1; $col <= $size; $col++) {
+                // Display the result of row * column
+                echo "<td style='padding: 5px; text-align: center;'>" . ($row * $col) . "</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+    }
+    ?>
+    <a href="index.html">Return to Index</a>
+
+</body>
+</html>
